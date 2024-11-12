@@ -16,15 +16,15 @@ public class GameList {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
-  private String nome;
+  private String name;
   
   
 public GameList() {}
 
 
-public GameList(long id, String nome) {
+public GameList(long id, String name) {
 	this.id = id;
-	this.nome = nome;
+	this.name = name;
 }
 
 
@@ -39,12 +39,12 @@ public void setId(long id) {
 
 
 public String getNome() {
-	return nome;
+	return name;
 }
 
 
-public void setNome(String nome) {
-	this.nome = nome;
+public void setNome(String name) {
+	this.name = name;
 }
 
 
