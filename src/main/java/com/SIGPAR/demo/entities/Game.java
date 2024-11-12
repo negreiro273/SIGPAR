@@ -20,26 +20,31 @@ public class Game {
 	@Column(name = "game_year")
 	private Integer year;
 	private String  genre;
-	private String  platform;
-	private String  imgUrl;
-	private String  shortDescription;
-	private String  longDescription;
+	private String  platforms;
+	private Double  score;
+	private String  img_url;
+	@Column(columnDefinition = "TEXT")
+	private String  short_description;
+	@Column(columnDefinition = "TEXT")
+	private String  long_description;
 	
 	public Game() {}
 
-	public Game(long id, String title, Integer year, String genre, String platform, String imgUrl,
-			String shortDescription, String longDescription) {
+	public Game(long id, String title, Integer year, String genre, String platforms,Double  score, String img_url,
+			String short_description, String long_description) {
 		
 		this.id = id;
 		this.title = title;
 		this.year = year;
 		this.genre = genre;
-		this.platform = platform;
-		this.imgUrl = imgUrl;
-		this.shortDescription = shortDescription;
-		this.longDescription = longDescription;
+		this.platforms = platforms;
+		this.score =  score;
+		this.img_url = img_url;
+		this.short_description = short_description;
+		this.long_description = long_description;
 	}
 
+	
 	public long getId() {
 		return id;
 	}
@@ -73,38 +78,46 @@ public class Game {
 	}
 
 	public String getPlatform() {
-		return platform;
+		return platforms;
 	}
 
-	public void setPlatform(String platform) {
-		this.platform = platform;
+	public void setPlatform(String platforms) {
+		this.platforms = platforms;
+	}
+	
+	public Double getScore() {
+		return score;
+	}
+
+	public void setScore(Double score) {
+		this.score = score;
 	}
 
 	public String getImgUrl() {
-		return imgUrl;
+		return img_url;
 	}
 
-	public void setImgUrl(String imgUrl) {
-		this.imgUrl = imgUrl;
+	public void setImgUrl(String img_url) {
+		this.img_url = img_url;
 	}
 
 	public String getShortDescription() {
-		return shortDescription;
+		return short_description;
 	}
 
-	public void setShortDescription(String shortDescription) {
-		this.shortDescription = shortDescription;
+	public void setShortDescription(String short_description) {
+		this.short_description = short_description;
 	}
 
 	public String getLongDescription() {
-		return longDescription;
+		return long_description;
 	}
 
-	public void setLongDescription(String longDescription) {
-		this.longDescription = longDescription;
+	public void setLongDescription(String long_description) {
+		this.long_description = long_description;
 	}
 	
-    // Para Fazer Comparar um Objeto com o Outro
+    // Para Comparar um Objeto com o Outro
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
