@@ -1,6 +1,7 @@
 package com.SIGPAR.demo.dto;
 
 import com.SIGPAR.demo.entities.Game;
+import com.SIGPAR.demo.projections.GameMinProjection;
 
 public class GameMinDTO {
 	
@@ -23,6 +24,17 @@ public class GameMinDTO {
 		this.year               = entity.getYear();
 		this.img_url            = entity.getImgUrl();
 		this.short_description  = entity.getShortDescription();
+		
+		
+	}
+
+	public GameMinDTO(GameMinProjection projection) {
+		
+		this.id                 = projection.getId();
+		this.title              = projection.getTitle();
+		this.year               = projection.getYear();
+		this.img_url            = projection.getImgUrl();
+		this.short_description  = projection.getShortDescription();
 		
 		
 	}

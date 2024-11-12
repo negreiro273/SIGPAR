@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.SIGPAR.demo.dto.GameListDTO;
-import com.SIGPAR.demo.entities.GameList;
 import com.SIGPAR.demo.repositories.GameListRepository;
 
 @Service

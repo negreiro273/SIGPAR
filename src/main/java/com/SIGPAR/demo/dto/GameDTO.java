@@ -4,7 +4,6 @@ import org.springframework.beans.BeanUtils;
 
 import com.SIGPAR.demo.entities.Game;
 
-import ch.qos.logback.core.joran.util.beans.BeanUtil;
 
 public class GameDTO {
 
